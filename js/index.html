@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background changer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s;
+        }
+        
+        #redBtn {
+            background-color: red;
+            color: white;
+        }
+
+        #greenBtn {
+            background-color: green;
+            color: white;
+        }
+
+        #blueBtn {
+            background-color: blue;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button {
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+    </style>
+</head>
+<body id="body">
+
+    <div class="container">
+        <button id="redBtn">Red</button>
+        <button id="greenBtn">Green</button>
+        <button id="blueBtn">Blue</button>
+    </div>
+
+
+    <script>
+        let redBtn = document.getElementById("redBtn");
+        let greenBtn = document.getElementById("greenBtn");
+
+        redBtn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "red";
+        });
+
+        greenBtn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "green";
+    
+        });
+
+    </script>
+    
+</body>
+</html>
