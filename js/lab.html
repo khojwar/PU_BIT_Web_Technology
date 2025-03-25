@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Sign in</h1>
+    <form action="">
+        <input type="text" name="" id="" placeholder="Username">
+        <input type="password" name="" id="password" placeholder="Password">
+        <button type="submit" id="submit">Sign in</button>
+    </form>
+
+
+    <script>
+
+        const password = document.getElementById('password');
+        const submit = document.getElementById('submit');
+
+        submit.addEventListener("click", function(e){
+            e.preventDefault()
+            const passwordValue = password.value
+            // alert(passwordValue)
+
+            const re = /^(?=.*[a-z])[A-Za-z\d!@#$%^&*]{8,}$/
+
+            const match = re.test(passwordValue)
+
+            if (!match) {
+                console.log('password is invalid')
+            } else {
+                console.log('Password is valid')
+            }
+
+
+
+            
+
+        })
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

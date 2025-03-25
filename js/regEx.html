@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" id="form">
+        <label for="mobile-number">Mobile number</label>
+        <input type="text" name="" id="mobile-number">
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <script>
+        const form = document.getElementById('form');
+        const mobileNumber = document.getElementById('mobile-number');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const mobileNumberValue = mobileNumber.value;
+            const regEx = /^98[0-9]{8}$/;
+            if(regEx.test(mobileNumberValue)){
+                alert('Valid mobile number');
+            }else{
+                alert('Invalid mobile number');
+            }
+        });
+        
+
+    </script>
+
+
+
+
+</body>
+</html>
