@@ -1,0 +1,34 @@
+<input type="text" id="usernameInput" placeholder="Enter username"> 
+<button id="btn">Save</button> 
+ 
+<script> 
+  const btn = document.getElementById("btn");
+
+  btn.addEventListener("click", function(){
+    let username = document.getElementById("usernameInput").value; 
+    console.log(username);
+    document.cookie = `username=${username}; path=/`
+
+    console.log(document.cookie);
+  })
+
+
+  
+  // Load cookie if exists 
+  window.onload = function () { 
+    let username = getCookie("username"); 
+    if (username) { 
+      document.getElementById("usernameInput").value = username; 
+    } 
+  } 
+ 
+  function getCookie(name) { 
+    let cookies = document.cookie.split("; "); 
+    for (let c of cookies) { 
+      let [key, value] = c.split("="); 
+      if (key === name) return value; 
+    } 
+    return null; 
+  } 
+
+</script>
