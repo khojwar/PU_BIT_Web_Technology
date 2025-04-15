@@ -1,0 +1,6 @@
+<!DOCTYPE person SYSTEM "person.dtd">
+<person>
+    <name>John Doe</name>
+    <email>john.doe@example.com</email>
+    <course>Computer Science</course>
+  </person>

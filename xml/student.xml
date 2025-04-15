@@ -1,0 +1,23 @@
+
+<!DOCTYPE student [
+  <!ELEMENT student (name, email, course)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT course (#PCDATA)>
+]>
+
+<student>
+  <name>John Doe</name>
+  <email>john.doe@example.com</email>
+  <course>Computer Science</course>
+</student>
+<!-- <student>
+    <name>Jane Smith</name>
+    <email>jane.smith@example.com</email>
+    <courses>
+      <course>Mathematics</course>
+      <course>Physics</course>
+      <course>Computer Science</course>
+    </courses>
+   
+  </student> -->
